@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    int p,n,t,i,c=0,a[100];
+    scanf("%d",&p);
+      scanf("%d",&n);
+      for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+        t=p;
+         
+          for(i=0;i<n;i++)
+          {
+              if(a[i]>p)
+            {
+            printf("-1");
+            
+            break;
+            }
+             else if(t>a[i])
+              t-=a[i];
+              else if(t<a[i]||t==a[i])
+              {
+                  t=p;
+                  c++;
+                  i--;
+              }
+          }
+        printf("%d",c+1);
+    
+    return 0;
+}
