@@ -1,0 +1,11 @@
+n=int(input())
+s=input()
+c=v=0
+for i in s:
+    if i=='U':
+        c+=1
+        if c==0:
+            v+=1
+    elif i=='D':
+        c-=1
+print(v)  
